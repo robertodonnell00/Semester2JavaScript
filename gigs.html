@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <title>Lady Troffea gigs</title>
+    <link href="css/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body class="back">
+    <script id="gigPage" type="text/x-handlebars-template">
+    <div class="ui grid stackable container">
+        <nav class="ui top attached tabular menu">
+            <a class="item" href="index.html"> Home</a>
+            <a class="item" href="members.html">Members</a>
+            <a class="item" href="inspirations.html">Inspirations</a>
+            <a class="active item" href="gigs.html">Upcoming Gigs</a>
+
+
+        </nav>
+
+        <header>
+            <h1>Upcoming Gigs!</h1>
+            <h3>If we're playing in your area, be sure to check us out!</h3>
+    
+        </header>
+        
+        <div class="ui grid container row">
+        <div class="ui equal width column">
+        <table class="ui striped celled selectable table">
+          
+            <thead>
+            <tr>
+                <th>Venue</th>
+                <th>County</th>
+                <th>Date</th>
+                <th>Time</th>
+                </tr>
+            </thead>
+           <tbody>
+            {{#each this}}
+            <tr>
+                <td>{{venue}}</td>    
+                <td>{{county}}</td>
+                <td>{{date}}</td>
+                <td>{{time}}</td>
+                </tr>
+                {{/each}}
+            
+            </tbody>
+            </table>
+        
+        
+        
+        </div>
+        </div>
+
+    </div>
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+    crossorigin="anonymous">
+   </script>  
+<script src="js/script.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+   <script>
+$(() => {
+
+const gigs = [
+       {
+        "venue":"Uisce Beatha",
+        "county":"Waterford",
+        "date":"08/05/2023",
+        "time": "9pm"
+       },
+       {
+       "venue":"Reardons",
+       "county":"Cork",
+       "date":"14/05/2023",
+       "time": "9:30pm"
+       },
+       {
+        "venue":"Electric Avenue",
+        "county":"Waterford",
+        "date":"24/05/2023",
+        "time": "10pm"
+       },
+       {
+        "venue":"Geoffs",
+        "county":"Waterford",
+        "date":"30/05/2023",
+        "time": "11pm"
+       }
+    
+      ]
+let template = Handlebars.compile($('#gigPage').html());
+let output = template(gigs);
+$(document.body).html(output);
+
+})
+
+   </script>
+      
+      
+      <script>
+        (() => {
+            let head = $('thead th')
+            head.addClass('head')
+            // head.css({
+            //     'color' : 'blue',
+            //     'font-style' : 'italic'
+            //         })
+            });
+      </script>
+
+</body></html>

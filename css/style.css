@@ -1,0 +1,185 @@
+p {
+    color: white;
+    background: transparent;
+    font-family: sans-serif;
+    text-shadow: 2px 2px black;
+}
+
+.back {
+    background-image: url(../images/lady_troffea1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.head {
+  color: crimson;
+  font-style: oblique;
+}
+
+nav {
+    color: white;
+}
+
+footer {
+    margin: 2em;
+    padding: 2em;
+    color: aqua
+    
+}
+
+.decor {
+  color: burlywood;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
+
+.ui.form .inline.fields {
+  margin: 1em 1em 1em;
+  align-items: center;
+}
+
+.ui.form .inline.fields .field {
+  margin: 5;
+  padding: .5em 1em .5em 1em;
+}
+
+.ui.table thead th{
+    background: red;
+    color: black;
+}
+
+.ui.striped.table > tr:nth-child(2n),
+  .ui.striped.table tbody tr:nth-child(2n) {
+    background-color: rgba(255,12,16, .5);
+      color: aliceblue;
+}
+
+.ui.selectable.table tbody tr:hover,
+  .ui.table tbody tr td.selectable:hover {
+    background-color: rgba(255, 12, 176,.7) !important;
+}
+
+.ui.container {
+  margin-top:5%;
+}
+
+.ui.card .description {
+ 
+    padding: 1em;
+    font-family: monospace;
+    color: auto;
+}
+
+.ui.card .content {
+  color: purple;
+}
+
+
+
+.ui.card {
+  margin: 1em 0em;
+}
+
+#more {
+  background-color:brown;
+  color: black;
+}
+body {
+  margin: 5;
+}
+
+header {
+    text-align: center;
+    padding: 2em;
+}
+
+ui.grid.stackable.container > .ui.top.attached.tabular.menu{
+    color: white;
+}
+
+h1 {
+    color: white;
+    
+}
+
+h3{
+    color:azure; 
+}
+
+a{
+   font-weight:lighter;
+   font-family:serif;
+   color: red
+}
+
+.ui.tabular.menu {
+  border-radius: 1em;
+  box-shadow: none !important;
+  border: none;
+  background: none transparent;
+  border-bottom: 1px solid red;
+}
+
+.ui.tabular.fluid.menu {
+  width: calc(100% + (1px * 2)) !important;
+}
+
+.ui.tabular.menu .item {
+  background: white;
+  border-bottom: none;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-top: 2px solid transparent;
+  padding: 1em 1.5em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.ui.tabular.menu .item:before {
+  display: none;
+}
+
+.ui.grid > .column + .divider,
+.ui.grid > .row > .column + .divider {
+  left: auto;
+}
+
+.ui.grid > .column:not(.row) {
+  padding-top: 2em;
+  padding-bottom: 2rem;
+}
+
+.ui.grid > .row > .column {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Hover */
+
+.ui.tabular.menu .item:hover {
+  background-color: transparent;
+  color: rgba(150, 150, 2, 0.8);
+}
+
+/* Active */
+
+.ui.tabular.menu .active.item {
+  background: red;
+  color: rgba(0, 0, 0, 0.95);
+  border-top-width: 1px;
+  border-color: #D4D4D5;
+  font-weight: bold;
+  margin-bottom: -1px;
+  box-shadow: none;
+  border-radius: 0.28571429rem 0.28571429rem 0px 0px !important;
+}
+
+/* Coupling with segment for attachment */
+
+.ui.tabular.menu + .attached:not(.top).segment,
+.ui.tabular.menu + .attached:not(.top).segment + .attached:not(.top).segment {
+  border-top: none;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
